@@ -59,11 +59,30 @@ h6 {
     background-color: #d3d3d3;
     min-height: 700px;
     border-radius: 25px;
+    text-align: center;
 }
 
+.main-out {
+    margin: 0 50px 0 50px;
+    background-color: #d3d3d3;
+    min-height: 700px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.placeholder {
+    font-size: 127px;
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+}
 
 .bottom {
     margin: 20px 50px 0 50px;
     font-size: 12px;
     font-family: 'Lato', sans-serif;
+}
+
+.lastfm-button {
+
 }

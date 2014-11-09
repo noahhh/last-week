@@ -4,21 +4,28 @@
   <br>Find what you have in common. Be judgy. Discover new artists.</h6>
 </div>
 
+
 <div class="above-main">
+  <% unless logged_in? %>
   <p>
     To start, please <%= link_to "log in via Last.fm", "/auth/lastfm" %>
-  <br><b>or</b>
-  <br>
+  <br><b>or</b><br>
   <div class="form">
     <input type="text" name="lastfmusername" id="lastfmusername" placeholder="Enter your Last.fm username here">
     <a href="#" id="lastfmsubmitbtn"><i class="fa fa-music"></i> See who your friends are listening to</a>
     <span id="lastfmapidata" class="clearfix"></span>
   </div></p>
+    <!--<#= simple_form_for :user, :url => {:action => :create} do |f| %>
+      <#= f.input :uid, "Enter your Last.fm username here" %>
+      <#= f.button :submit, "Find Your Friends' Favorite Artists", class: "lastfm-button" %>
+    <# end %>-->
+  <% else %>
+    <p>Logged in as <%= current_user.name %></p>
+  <% end %>
 </div>
 
-<div class="main">
 <% if logged_in? %>
-  <p>Logged in as <%= current_user.name %></p>
+  <div class="main-in">
   <!--this section needs work, based on what can be done with getting data from the API-->
   <% if @topartists %>
     <ul>
@@ -26,12 +33,16 @@
         <li><%= link_to topartists['full_name'], topartists['html_url'] %></li>
       <% end %>
     </ul>
+  </div>
   <% end %>
 <% else %>
-  <br>
-
+  <div class="main-out">
+    <div class="placeholder">
+      PLACEHOLDER CONTENT
+    </div>
+  </div>
 <% end %>
-</div>
+
 
 <div class="bottom">
   <br>Powered by the <a href="http://www.last.fm/api">Last.fm API</a>.
