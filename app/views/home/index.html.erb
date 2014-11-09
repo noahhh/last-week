@@ -1,0 +1,27 @@
+<div>
+  <h1>L<span class="red"><i class="fa fa-lastfm"></i></span>t Week</h1>
+  <h6>See your friends' favorite artists on one page. </h6>
+</div>
+
+<% if logged_in? %>
+  <p>Logged in as <%= current_user.name %></p>
+
+  <% if @topartists %>
+    <ul>
+      <% @topartists.each do |topartists| %>
+        <li><%= link_to topartists['full_name'], topartists['html_url'] %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% else %>
+  <br>
+  <p>
+    To start, please <%= link_to "log in via Last.fm", "http://www.last.fm/api/auth?api_key=84f102d8aaa1c663732540d339bf2100&cb=http://0.0.0.0:3000" %>
+  </p>
+<% end %>
+
+<div class="bottom">
+  Powered by the <a href="http://www.last.fm/api">Last.fm API</a>.
+</div>
+
+<!-- &cb=http://0.0.0.0:3000/" -->
