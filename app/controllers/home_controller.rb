@@ -1,5 +1,4 @@
 class HomeController < ApplicationController
-  #this needs a lot of work
   def index
     if current_user
       lastfm_auth = current_user.users.find_by(provider: :lastfm)
