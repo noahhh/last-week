@@ -1,11 +1,13 @@
-<div>
+<div class="title">
   <h1>L<span class="red"><i class="fa fa-lastfm"></i></span>t Week</h1>
-  <h6>See your friends' favorite artists on one page. </h6>
+  <h6>See your friends' favorite artists on one page.
+  <br>Find what you have in common. Be judgy. Discover new artists.</h6>
 </div>
 
+<div class="main">
 <% if logged_in? %>
   <p>Logged in as <%= current_user.name %></p>
-
+  <!--this section needs work, based on what can be done with getting data from the API-->
   <% if @topartists %>
     <ul>
       <% @topartists.each do |topartists| %>
@@ -18,10 +20,15 @@
   <p>
     To start, please <%= link_to "log in via Last.fm", "/auth/lastfm" %>
   </p>
+    <p><b>OR</b></p>
+  <div class="form">
+    <input type="text" name="lastfmusername" id="lastfmusername" placeholder="Enter your Last.fm username here">
+    <a href="#" id="lastfmsubmitbtn"><i class="fa fa-music"></i> See who your friends are listening to</a>
+    <div id="lastfmapidata" class="clearfix"></div>
+  </div>
 <% end %>
-
-<div class="bottom">
-  Powered by the <a href="http://www.last.fm/api">Last.fm API</a>.
 </div>
 
-<!-- &cb=http://0.0.0.0:3000/" -->
+<div class="bottom">
+  <br>Powered by the <a href="http://www.last.fm/api">Last.fm API</a>.
+</div>
