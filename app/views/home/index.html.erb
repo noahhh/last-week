@@ -1,7 +1,7 @@
 <div class="title">
   <h1>L<span class="red"><i class="fa fa-lastfm"></i></span>t Week</h1>
   <h6>See your friends' favorite artists on one page.
-  <br>Find what you have in common. Be judgy. Discover new artists.</h6>
+  <br>Find what you have in common. Be judgy. Discover new music.</h6>
 </div>
 
 
@@ -12,8 +12,8 @@
   <br><b>or</b><br>
   <div class="form">
     <input type="text" name="lastfmusername" id="lastfmusername" placeholder="Enter your Last.fm username here">
-    <a href="#" id="lastfmsubmitbtn"><i class="fa fa-music"></i> See who your friends are listening to</a>
-    <span id="lastfmapidata" class="clearfix"></span>
+    <a href="#" class="small button">Submit</a><!--<a href="#" id="lastfmsubmitbtn"><i class="fa fa-music"></i> See who your friends are listening to</a>
+    <span id="lastfmapidata" class="clearfix"></span>-->
   </div></p>
     <!--<#= simple_form_for :user, :url => {:action => :create} do |f| %>
       <#= f.input :uid, "Enter your Last.fm username here" %>
@@ -21,6 +21,7 @@
     <# end %>-->
   <% else %>
     <p>Logged in as <%= current_user.name %></p>
+    <%= link_to "Sign out", signout_path %>
   <% end %>
 </div>
 
@@ -38,7 +39,87 @@
 <% else %>
   <div class="main-out">
     <div class="placeholder">
-      PLACEHOLDER CONTENT
+      <div class="gap"></div>
+      <table>
+        <tr>
+          <td>
+            <div class="artist">
+              <br>Username (which is a link to user's lastfm page)
+              <br>Picture of that user's top artist (7day) (links to lastfm artist page)
+              <br>Name of user's top artist (7day) (links to lastfm artist page)
+            </div>
+          </td>
+          <td>
+            <div class="artist">
+              <br>Username (which is a link to user's lastfm page)
+              <br>Picture of that user's top artist (7day) (links to lastfm artist page)
+              <br>Name of user's top artist (7day) (links to lastfm artist page)
+            </div>
+          </td>
+          <td>
+            <div class="artist">
+              <br>Username (which is a link to user's lastfm page)
+              <br>Picture of that user's top artist (7day) (links to lastfm artist page)
+              <br>Name of user's top artist (7day) (links to lastfm artist page)
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="artist">
+              <br>Username (which is a link to user's lastfm page)
+              <br>Picture of that user's top artist (7day) (links to lastfm artist page)
+              <br>Name of user's top artist (7day) (links to lastfm artist page)
+            </div>
+          </td>
+          <td>
+            <div class="artist">
+              <br>Username (which is a link to user's lastfm page)
+              <br>Picture of that user's top artist (7day) (links to lastfm artist page)
+              <br>Name of user's top artist (7day) (links to lastfm artist page)
+            </div>
+          </td>
+          <td>
+            <div class="artist">
+              <br>Username (which is a link to user's lastfm page)
+              <br>Picture of that user's top artist (7day) (links to lastfm artist page)
+              <br>Name of user's top artist (7day) (links to lastfm artist page)
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="artist">
+              <br>Username (which is a link to user's lastfm page)
+              <br>Picture of that user's top artist (7day) (links to lastfm artist page)
+              <br>Name of user's top artist (7day) (links to lastfm artist page)
+            </div>
+          </td>
+          <td>
+            <div class="artist">
+              <br>Username (which is a link to user's lastfm page)
+              <br>Picture of that user's top artist (7day) (links to lastfm artist page)
+              <br>Name of user's top artist (7day) (links to lastfm artist page)
+            </div>
+          </td>
+          <td>
+            <div class="artist">
+              <br>Username (which is a link to user's lastfm page)
+              <br>Picture of that user's top artist (7day) (links to lastfm artist page)
+              <br>Name of user's top artist (7day) (links to lastfm artist page)
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="artist">
+              <br>Username (which is a link to user's lastfm page)
+              <br>Picture of that user's top artist (7day) (links to lastfm artist page)
+              <br>Name of user's top artist (7day) (links to lastfm artist page)
+            </div>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
 <% end %>

@@ -71,18 +71,29 @@ h6 {
 }
 
 .placeholder {
-    font-size: 127px;
-    position: relative;
-    top: 50%;
-    transform: translateY(50%);
+    margin-top: 10px;
+    margin-left: auto;
+}
+
+.gap {
+    height: 100px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    buffer-top: 50px;
+}
+
+.artist {
+    font-size: 15px;
+    height: 250px;
+    width: 250px;
+    margin: 50px 50px 50px 50px;
 }
 
 .bottom {
     margin: 20px 50px 0 50px;
     font-size: 12px;
     font-family: 'Lato', sans-serif;
-}
-
-.lastfm-button {
-
 }
