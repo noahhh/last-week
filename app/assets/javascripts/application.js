@@ -32,8 +32,14 @@ $.ajax({
 		$.each(users, function(i, user) {
 			$.ajax({
 				type: 'POST',
-				url: 'http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=' + user.name + '&period=7day&api_key=3d7e6bb560deeb5d15af8176abf5c928&format=json',
-				dataType: 'json',
+				url: 'http://ws.audioscrobbler.com/2.0/',
+	    data: 'method=user.gettopartists&' +
+	    'user=' +
+      user.name +
+	    '&period=7day&' +
+	    'api_key=433b1f8a183487738257bd91cd0467aa&' +
+	    'format=json',
+	    dataType: 'json',
 				success: function(data1) {
 					if(typeof data1.topartists.artist[0] !== "undefined") {
 					$.when($('#success').append('<p>' + user.name + " name ")).then($('#success').append(data1.topartists.artist[0].name + " band " + '</p>'));
