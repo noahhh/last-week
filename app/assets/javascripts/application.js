@@ -17,3 +17,26 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+        $.ajax({
+          type : 'POST',
+          url : 'http://ws.audioscrobbler.com/2.0/',
+          data : 'method=user.getfriends&' +
+                 'user=gburt802&' +
+                 'api_key=433b1f8a183487738257bd91cd0467aa&' +
+                 'format=json',
+          dataType : 'json',
+          success: function(data) {
+            var users = data.friends.user;
+            $.each(users, function(i, user) {
+                $.ajax({
+                  type : 'POST',
+                  url : 'http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=' + user.name + '&period=7day&api_key=3d7e6bb560deeb5d15af8176abf5c928&format=json',
+                  dataType : 'json',
+                  success : function(data1) {
+                      $('#success').append(user.name);                  $('#success').append(data1.topartists.artist[1].name);
+                  }
+                });
+              });
+            }
+    });
