@@ -36,7 +36,7 @@ $.ajax({
 				dataType: 'json',
 				success: function(data1) {
 					if(typeof data1.topartists.artist[0] !== "undefined") {
-					$.when($('#success').append(user.name + " name ")).then($('#success').append(data1.topartists.artist[0].name + " band "));
+					$.when($('#success').append('<p>' + user.name + " name ")).then($('#success').append(data1.topartists.artist[0].name + " band " + '</p>'));
 				}
 			}
 			});
