@@ -6,7 +6,7 @@
 
 
 <div class="above-main">
-  <% unless logged_in? %>
+  <% unless current_user %>
   <p>
     To start, please <%= link_to "log in via Last.fm", "/auth/lastfm" %>
   <br><b>or</b><br>
@@ -25,7 +25,7 @@
   <% end %>
 </div>
 
-<% if logged_in? %>
+<% if current_user %>
   <div class="main-in">
   <!--this section needs work, based on what can be done with getting data from the API-->
   <% if @topartists %>
