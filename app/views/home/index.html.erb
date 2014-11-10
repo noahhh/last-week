@@ -6,9 +6,9 @@
 
 <div class="above-main">
   <% unless current_user %>
-  <p>
+  <!--commenting this out since login via Last.fm omniauth is not working<p>
     To start, please <%= link_to "log in via Last.fm", "/auth/lastfm" %>
-  <br><b>or</b><br>
+  <br><b>or</b><br>-->
 
   <div class="form">
     <input type="text" name="lastfmusername" id="lastfmusername" placeholder="Enter your Last.fm username here">
@@ -36,9 +36,11 @@
     <div class="placeholder">
       <div class="gap"></div>
       <div id="success" class="clearfix">
+        <a href="http://jsfiddle.net/Nrnh/7aas381y/8/">Link to working AJAX request</a>
       </div>
 
-      <!--<table>
+      <!--placeholder data for site-->
+      <table>
         <tr>
           <td>
             <div class="artist">
@@ -107,7 +109,7 @@
             </div>
           </td>
         </tr>
-      </table>-->
+      </table>
       <div class="gap"></div>
     </div>
   </div>
