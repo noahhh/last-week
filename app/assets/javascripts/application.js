@@ -18,13 +18,21 @@
 
 $(function(){ $(document).foundation(); });
 
-$.ajax({
+
+$(function() {
+    $('#lastfmsubmitbutton').on('click', function(e){
+        e.preventDefault();
+        $('#lastfmapidata').html('<div id="loader">loading...</div>');
+
+        var username = $ ('#lastfmusername').val();
+
+    $.ajax({
 	type : 'POST',
 	url : 'http://ws.audioscrobbler.com/2.0/',
 	data : 'method=user.getfriends&' +
-	'user=gburt802&' +
-	'limit=10&' +
-	'api_key=433b1f8a183487738257bd91cd0467aa&' +
+	'user=' + username +
+	'&limit=10&' +
+	'api_key=ENV['LASTFM_KEY']&' +
 	'format=json',
 	dataType : 'json',
 	success: function(data) {
@@ -32,7 +40,7 @@ $.ajax({
 		$.each(users, function(i, user) {
 			$.ajax({
 				type : 'POST',
-				url : 'http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=' + user.name + '&period=7day&api_key=3d7e6bb560deeb5d15af8176abf5c928&format=json',
+				url : 'http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=' + user.name + '&period=7day&api_key=ENV['LASTFM_KEY']&format=json',
 				dataType : 'json',
 				success : function(data1) {
 					$('#success').append(user.name);                  $('#success').append(data1.topartists.artist[1].name);
@@ -40,4 +48,4 @@ $.ajax({
 			});
 		});
 	}
-});
+})}};
