@@ -25,7 +25,7 @@ $(function(){ $(document).foundation(); });
 $(function()
     $('#lastfmsubmitbutton').on('click', function(e){
         e.preventDefault()},
-        $('#success').html('<div id="loader">loading...</div>')};
+        $('#success').html('<div id="loader">loading...</div>'),
 
         FindFavs(username)
 

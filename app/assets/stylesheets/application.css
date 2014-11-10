@@ -85,7 +85,8 @@ h6 {
 .clearfix {
     margin-top: -50px;
     font-size: 30px;
-    font-weight: 700px;
+    font-weight: 700;
+    padding-bottom: 55px;
 }
 
 table {

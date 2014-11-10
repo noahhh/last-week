@@ -6,9 +6,9 @@
 
 <div class="above-main">
   <% unless current_user %>
-  <!--commenting this out since login via Last.fm omniauth is not working<p>
+  <!--Last.fm omniauth is not working--><p>
     To start, please <%= link_to "log in via Last.fm", "/auth/lastfm" %>
-  <br><b>or</b><br>-->
+  <br><b>or</b><br>
 
   <div class="form">
     <input type="text" name="lastfmusername" id="lastfmusername" placeholder="Enter your Last.fm username here">
