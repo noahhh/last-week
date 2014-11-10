@@ -89,7 +89,7 @@ h6 {
 table {
     margin-left: auto;
     margin-right: auto;
-    buffer-top: 50px; /*is buffer top or did you mean padding?*/
+    buffer-top: 50px; /*is it buffer top or did you mean padding?*/
 }
 
 .artist {

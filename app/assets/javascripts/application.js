@@ -32,7 +32,7 @@ $(function()
 
 function FindFavs(username){
     $.ajax({
-        var username = $ ('#lastfmusername').val(),
+      var username = $ ('#lastfmusername').val(),
 	    type: 'POST',
 	    url: 'http://ws.audioscrobbler.com/2.0/',
 	    data: 'method=user.getfriends&' +
@@ -61,10 +61,10 @@ function FindFavs(username){
 
 				success: function(data1) {
 					if(typeof data1.topartists.artist[0] !== "undefined") {
-					$.when($('.success').append('<div class="username">' + user.name + "'s " + "top "
-					+ "band " + "this " + "week" + '</div>')).then($('.success').append('<div class="topartist">'
-					+ '<a href="' + data1.topartists.artist[0].url + '"' + '>' + data1.topartists.artist[0].name
-					+ '</a>' + '</div>'));
+					$.when($('.success').append('<div class="username">' + user.name + "'s " + "top " + "band " +
+					"this " + "week" + '</div>')).then($('.success').append('<div class="topartist">' +
+					'<a href="' + data1.topartists.artist[0].url + '"' + '>' + data1.topartists.artist[0].name +
+					'</a>' + " - " + data1.topartists.artist[0].playcount + '</div>'));
 				}
 			}
 			});
