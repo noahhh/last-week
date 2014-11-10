@@ -35,7 +35,7 @@ $.ajax({
 				url: 'http://ws.audioscrobbler.com/2.0/',
 	    data: 'method=user.gettopartists&' +
 	    'user=' +
-        user.name +
+      user.name +
 	    '&period=7day&' +
 	    'api_key=84f102d8aaa1c663732540d339bf2100&' +
 	    'format=json',
