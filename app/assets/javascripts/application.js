@@ -18,33 +18,48 @@
 
 $(function(){ $(document).foundation(); });
 
-
 $(function() {
     $('#lastfmsubmitbutton').on('click', function(e){
         e.preventDefault();
-        $('#lastfmapidata').html('<div id="loader">loading...</div>');
+        $('#success').html('<div id="loader">loading...</div>');
 
         var username = $ ('#lastfmusername').val();
+        FindFavs(username)
 
+function FindFavs(username)
     $.ajax({
-	type : 'POST',
-	url : 'http://ws.audioscrobbler.com/2.0/',
-	data : 'method=user.getfriends&' +
-	'user=' + username +
-	'&limit=10&' +
-	'api_key=ENV['LASTFM_KEY']&' +
-	'format=json',
-	dataType : 'json',
+	    type: 'POST',
+	    url: 'http://ws.audioscrobbler.com/2.0/',
+	    data: 'method=user.getfriends&' +
+	    'user=' + username +
+	    'limit=10&' +
+	    'api_key=' + ENV['LASTFM_KEY'] +
+	'   format=json',
+	dataType: 'json',
 	success: function(data) {
 		var users = data.friends.user;
 		$.each(users, function(i, user) {
 			$.ajax({
-				type : 'POST',
-				url : 'http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=' + user.name + '&period=7day&api_key=ENV['LASTFM_KEY']&format=json',
-				dataType : 'json',
-				success : function(data1) {
-					$('#success').append(user.name);                  $('#success').append(data1.topartists.artist[1].name);
+//				type : 'POST',
+//				url : 'http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=' + user.name + '&period=7day&api_key=' + ENV['LASTFM_KEY']+'&format=json',
+//				dataType : 'json',
+//				success : function(data1) {
+//					$('#success').append(user.name);
+//					$('#success').append(data1.topartists.artist[1].name);
+				type: 'POST',
+				url: 'http://ws.audioscrobbler.com/2.0/',
+	            data: 'method=user.gettopartists&' +
+	            'user=' + user.name +
+	            '&period=7day&'
+	            'api_key=' + ENV['LASTFM_KEY'] +
+	            '&format=json',
+
+				success: function(data1) {
+					if(typeof data1.topartists.artist[0] !== "undefined") {
+					$.when($('#success').append('<p>' + user.name + "'s " + "top " + "band " + "this " + "week"))
+                        .then($('#success').append(data1.topartists.artist[0].name + '</p>'));
 				}
+			}
 			});
 		});
 	}
