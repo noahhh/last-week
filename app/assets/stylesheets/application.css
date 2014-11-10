@@ -89,7 +89,7 @@ h6 {
 table {
     margin-left: auto;
     margin-right: auto;
-    buffer-top: 50px;
+    buffer-top: 50px; /*is buffer top or did you mean padding?*/
 }
 
 .artist {
@@ -102,5 +102,13 @@ table {
 .bottom {
     margin: 20px 50px 0 50px;
     font-size: 12px;
+    font-family: 'Lato', sans-serif;
+}
+
+.username {
+    font-family: 'Lato', sans-serif;
+}
+
+.topartist {
     font-family: 'Lato', sans-serif;
 }
