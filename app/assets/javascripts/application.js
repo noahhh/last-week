@@ -24,7 +24,7 @@ $.ajax({
 	data: 'method=user.getfriends&' +
 	'user=gburt802&' +
 	'limit=10&' +
-	'api_key=433b1f8a183487738257bd91cd0467aa&' +
+	'api_key=84f102d8aaa1c663732540d339bf2100&' +
 	'format=json',
 	dataType: 'json',
 	success: function(data) {
@@ -37,7 +37,7 @@ $.ajax({
 	    'user=' +
       user.name +
 	    '&period=7day&' +
-	    'api_key=433b1f8a183487738257bd91cd0467aa&' +
+	    'api_key=84f102d8aaa1c663732540d339bf2100&' +
 	    'format=json',
 	    dataType: 'json',
 				success: function(data1) {
