@@ -16,6 +16,10 @@
 //= require turbolinks
 //= require_tree .
 
+/*What we want to do here is call the function findfavs that makes the ajax call to last fm when the user clicks submit and we want to pass the username into the function to make the call on that user.
+ */
+
+
 $(function(){ $(document).foundation(); });
 
 $(function()
