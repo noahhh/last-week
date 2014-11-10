@@ -61,8 +61,10 @@ function FindFavs(username){
 
 				success: function(data1) {
 					if(typeof data1.topartists.artist[0] !== "undefined") {
-					$.when($('#success').append('<p>' + user.name + "'s " + "top " + "band " + "this " + "week"))
-                        .then($('#success').append(data1.topartists.artist[0].name + '</p>'));
+					$.when($('.success').append('<div class="username">' + user.name + "'s " + "top "
+					+ "band " + "this " + "week" + '</div>')).then($('.success').append('<div class="topartist">'
+					+ '<a href="' + data1.topartists.artist[0].url + '"' + '>' + data1.topartists.artist[0].name
+					+ '</a>' + '</div>'));
 				}
 			}
 			});
