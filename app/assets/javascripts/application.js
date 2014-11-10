@@ -18,16 +18,17 @@
 
 $(function(){ $(document).foundation(); });
 
-$(function() {
+$(function()
     $('#lastfmsubmitbutton').on('click', function(e){
-        e.preventDefault();
-        $('#success').html('<div id="loader">loading...</div>');
+        e.preventDefault()},
+        $('#success').html('<div id="loader">loading...</div>')};
 
-        var username = $ ('#lastfmusername').val();
         FindFavs(username)
 
-function FindFavs(username)
+
+function FindFavs(username){
     $.ajax({
+        var username = $ ('#lastfmusername').val(),
 	    type: 'POST',
 	    url: 'http://ws.audioscrobbler.com/2.0/',
 	    data: 'method=user.getfriends&' +
