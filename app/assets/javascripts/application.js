@@ -35,14 +35,14 @@ $.ajax({
 				url: 'http://ws.audioscrobbler.com/2.0/',
 	    data: 'method=user.gettopartists&' +
 	    'user=' +
-      user.name +
+        user.name +
 	    '&period=7day&' +
 	    'api_key=84f102d8aaa1c663732540d339bf2100&' +
 	    'format=json',
 	    dataType: 'json',
 				success: function(data1) {
 					if(typeof data1.topartists.artist[0] !== "undefined") {
-					$.when($('#success').append('<p>' + user.name + " name ")).then($('#success').append(data1.topartists.artist[0].name + " band " + '</p>'));
+					$.when($('#success').append('<p>' + user.name + "'s " + "top " + "band " + "this " + "week")).then($('#success').append(data1.topartists.artist[0].name + '</p>'));
 				}
 			}
 			});
