@@ -1,13 +1,11 @@
 class HomeController < ApplicationController
+
   def index
-    if current_user
-      lastfm_auth = current_user.users.find_by(provider: :lastfm)
-      if lastfm_auth
-        response = HTTParty.get("http://ws.audioscrobbler.com/2.0/",
-                                { user: "token #{lastfm_auth.token}" })
-        @topartists = JSON.parse(response.body)
-      end
-    end
+  end
+
+  def lastfm
+    lastfm = HTTParty.get("http://ws.audioscrobbler.com/2.0/method=user.getfriends&user=#{define_the_last_fm_username_here_as_a_variable}&limit=10&api_key=#{ENV["LASTFM_KEY"]}&format=json")
+    lastfm_data = JSON.parse(lastfm.body)
+    @topartists = lastfm_data["data"]
   end
 end
-
