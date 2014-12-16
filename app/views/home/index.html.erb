@@ -13,7 +13,7 @@
   </p>
 </div>
 <div class="main-in">
-  <% if @topartists %>
+  <% if @topartists != nil%>
     <ul>
       <% @topartists.each do |topartists| %>
         <li><%= link_to topartists['full_name'], topartists['html_url'] %></li>

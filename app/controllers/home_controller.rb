@@ -1,6 +1,9 @@
 class HomeController < ApplicationController
 
   def index
+    if lastfm != nil
+      lastfm
+    end
   end
 
   def lastfm
