@@ -107,3 +107,19 @@ table {
     font-size: 12px;
     font-family: 'Lato', sans-serif;
 }
+
+.success {
+    display: inline-block;
+}
+
+.username {
+    padding-bottom:10px;
+}
+
+.topartist {
+    padding-bottom:10px;
+}
+
+.username1 {
+    color: red;
+}

@@ -7,54 +7,29 @@
 <div class="above-main">
   <p>
     <div class="form">
-      <input type="text" name="lastfmusername" id="lastfmusername" placeholder="Enter your Last.fm username here">
-      <a href="#" class="small button" id="lastfmsubmitbutton">Submit</a>
+      <input id="textbox1" type="text" placeholder="Enter your last.fm username here" style="width: 300px;" />
+      <input id="buttons" type="button" value="Search" />
     </div>
   </p>
 </div>
-<div class="main-in">
-  <% if @topartists != nil%>
-    <ul>
-      <% @topartists.each do |topartists| %>
-        <li><%= link_to topartists['full_name'], topartists['html_url'] %></li>
-      <% end %>
-    </ul>
-  </div>
-  <% else %>
-  <div class="main-out">
-    <div class="placeholder">
-      <div class="gap"></div>
-      <div id="success" class="clearfix">
-        <a href="http://jsfiddle.net/Nrnh/7aas381y/14/">Link to working AJAX request</a>
-      </div>
 
-      <!--placeholder data for site-->
-      <table>
-        <tr>
-          <td>
-            <div class="artist">
-              <br>Username (links to user's lastfm page)
-              <br>Name of user's top artist (7day) (links to lastfm artist page)
-            </div>
-          </td>
-          <td>
-            <div class="artist">
-              <br>Username (links to user's lastfm page)
-              <br>Name of user's top artist (7day) (links to lastfm artist page)
-            </div>
-          </td>
-          <td>
-            <div class="artist">
-              <br>Username (links to user's lastfm page)
-              <br>Name of user's top artist (7day) (links to lastfm artist page)
-            </div>
-          </td>
-        </tr>
-      </table>
-      <div class="gap"></div>
+<div class="main-out">
+  <div class="placeholder">
+    <div class="gap"></div>
+    <div id="success" class="clearfix">
+      <a href="http://jsfiddle.net/Nrnh/7aas381y/85/">Link to working AJAX request</a>
     </div>
+
+    <table>
+      <tr>
+        <td class="success">
+        </td>
+      </tr>
+    </table>
+    <div class="gap"></div>
+    <div id="error"></div>
   </div>
-<% end %>
+</div>
 
 <div class="bottom">
   <br>Powered by the <a href="http://www.last.fm/api">Last.fm API</a>.
