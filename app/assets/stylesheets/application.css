@@ -1,125 +1,58 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- *= require foundation_and_overrides
- *= require font-awesome
-
- */
-
 body {
     font-family: 'Lato', sans-serif;
+    color: #404040;
 }
-
 h1 {
     font-family: 'Lato', sans-serif;
     font-weight: 500;
     font-size: 55px;
 }
-
-h6 {
+h5 {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
 }
-
 .title {
     margin: 0 50px 0 50px;
     text-align: center;
 }
-
 .red {
     color: #ff0000;
     font-size: 47px;
 }
-
 .above-main {
     margin: 65px 50px 0 50px;
     text-align: center;
 }
-
 .form {
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
     margin-top: -15px;
 }
-
-.main {
-    margin: 0 50px 0 50px;
-    background-color: #d3d3d3;
-    min-height: 700px;
-    min-width: 1120px;
-    border-radius: 25px;
-    text-align: center;
-}
-
-.main-out {
-    margin: 0 50px 0 50px;
-    background-color: #d3d3d3;
-    min-height: 700px;
-    min-width: 1120px;
-    border-radius: 25px;
-    text-align: center;
-}
-
-.placeholder {
-    margin-top: 10px;
-    margin-left: auto;
-    min-width: 1120px;
-}
-
-.gap {
-    height: 100px;
-}
-
-.clearfix {
-    margin-top: -50px;
-    font-size: 30px;
-    font-weight: 700;
-    padding-bottom: 55px;
-}
-
 table {
     margin-left: auto;
     margin-right: auto;
     buffer-top: 50px;
 }
-
-.artist {
-    font-size: 15px;
-    height: 200px;
-    width: 200px;
-    margin: 50px 50px 50px 50px;
-}
-
-.bottom {
-    margin: 20px 50px 0 50px;
-    font-size: 12px;
-    font-family: 'Lato', sans-serif;
-}
-
 .success {
     display: inline-block;
+    text-align: justify;
+    margin: 25px 50px 25px 50px;
 }
-
-.username {
+a {
+    color: #FF0606;
+    font-weight: 700;
+    text-decoration: none;
+}
+.username,.topartist {
     padding-bottom:10px;
 }
-
-.topartist {
-    padding-bottom:10px;
+.username a {
+    color: #404040;
 }
-
-.username1 {
-    color: red;
+.bottom {
+    margin: 100px 50px 0 50px;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
 }
