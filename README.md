@@ -1,4 +1,4 @@
-last-week
+Last Week
 =========
 
-Displays 10 of your last.fm friends and their top artist this week, all on one page.
+Enter in your last.fm username, and it returns a list of your last.fm friends and the most-played artist for each from the past week.
