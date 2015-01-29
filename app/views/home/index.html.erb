@@ -6,10 +6,10 @@
 <div class="above-main">
   <p>
   <div class="form">
-    <input id="textbox" type="text" placeholder="Enter your last.fm username here" style="width: 180px;" />
-    <div id="button">
-      <input type="submit" value="Search" />
-    </div>
+    <input id="textbox" type="text" placeholder="Enter your last.fm username here" style="width: 180px;" onkeydown="if(event.keyCode==13)$('#button').trigger('click');"/>
+      <span id="button">
+          <input type="submit" value="Search" />
+      </span>
   </div>
   </p>
 </div>
@@ -24,4 +24,5 @@
 </div>
 <div class="bottom">
   <br>Powered by the <a href="http://www.last.fm/api">Last.fm API</a>.
-</div>    
+</div>
+

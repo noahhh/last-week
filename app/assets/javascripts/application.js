@@ -1,6 +1,6 @@
 $( "#button" ).click(function() {
     $( "#textbox" ).blur();
-    var lastfmusername = 'user=' + document.getElementById("textbox").value;
+    var lastfmusername = 'user=' +                               document.getElementById("textbox").value;
     $('#textbox').val('');
     $.ajax({
         type: 'POST',
@@ -47,6 +47,5 @@ $( "#button" ).click(function() {
         $(".success").html(data);
     });
 });
-
 
 
