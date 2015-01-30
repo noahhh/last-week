@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Last Week - Find Out Your Friends' Top Artists!</title>
+    <link rel="stylesheet" href="css/application.css" type="text/css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <script src="js/new-jquery-2.1.3.min.js"></script>
+    <script src="js/application.js"></script>
+    <!--<script src="js/imtech_pager.js"></script>-->
+    <div class="title">
+      <h1>L<span class="red"><i class="fa fa-lastfm"></i></span>t Week</h1>
+      <h5>See your friends' favorite artists on one page.
+        <br>Find what you have in common. Be judgy. Discover new music.</h5>
+    </div>
+    <div class="above-main">
+      <p>
+        <div class="form">
+          <input id="textbox" type="text" placeholder="Enter your last.fm username here" style="width: 180px;" onkeydown="if(event.keyCode==13)$('#button').trigger('click');"/>
+          <span id="button">
+            <input type="submit" value="Search" />
+          </span>
+        </div>
+      </p>
+    </div>
+    <br>
+    <div id="content">
+      <table>
+        <tr>
+          <td id="success">
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="pagingControls"></div>
+    <div id="error"></div>
+    <div class="bottom">
+      <br>Powered by the <a href="http://www.last.fm/api">Last.fm API</a>.
+    </div>
+    <script type="text/javascript">
+    var pager = new Imtech.Pager();
+    $(document).ready(function() {
+      pager.paragraphsPerPage = 5; // set amount elements per page
+      pager.pagingContainer = $('#content'); // set of main container
+      pager.paragraphs = $('#success', pager.pagingContainer); // set of required containers
+      pager.showPage(1);
+    });
+    </script>
+  </body>
+</html>
