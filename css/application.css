@@ -25,17 +25,14 @@ h5 {
 }
 .form {
     max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -15px;
+    margin: -15 auto 0 auto;
     display: inline-block;
 }
 table {
-    margin-left: auto;
-    margin-right: auto;
-    buffer-top: 50px;
+    margin: 0 auto 0 auto;
+    /*padding-top: 25px;*/
 }
-.success {
+#success {
     display: inline-block;
     text-align: justify;
     margin: 25px 50px 25px 50px;
