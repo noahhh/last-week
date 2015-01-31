@@ -3,10 +3,12 @@
     <title>Last Week - Find Out Your Friends' Top Artists!</title>
     <link rel="stylesheet" href="css/application.css" type="text/css" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  </head>
-  <body>
+    <link rel="stylesheet" href="css/jPages.css">
+    <script src="js/jPages.js"></script>
     <script src="js/new-jquery-2.1.3.min.js"></script>
     <script src="js/application.js"></script>
+  </head>
+  <body>
     <div class="title">
       <h1>L<span class="red"><i class="fa fa-lastfm"></i></span>t Week</h1>
       <h5>See your friends' favorite artists on one page.
@@ -15,7 +17,7 @@
     <div class="above-main">
       <p>
         <div class="form">
-          <input id="textbox" type="text" placeholder="Enter your last.fm username here" style="width: 180px;" onkeydown="if(event.keyCode==13)$('#button').trigger('click');"/>
+          <input id="textbox" type="text" placeholder="Enter your last.fm username here" style="width: 185px;" onkeydown="if(event.keyCode==13)$('#button').trigger('click');"/>
           <span id="button">
             <input type="submit" value="Search" />
           </span>
@@ -23,14 +25,47 @@
       </p>
     </div>
     <br>
-    <div id="content">
-      <table>
-        <tr>
-          <td id="success">
-          </td>
-        </tr>
-      </table>
-    </div>
+
+    <script type="text/javascript">
+      function paginate() {
+        $('div.holder').jPages({
+          containerID: 'itemContainer',
+          perPage: 5
+        });
+      }
+
+      $(function(){
+        paginate();
+      });
+    </script>
+
+    <!--<div class="holder">-->
+      <!--<a class="jp-previous jp-disabled"<- previous</a>-->
+      <!--<a class="jp-current">1</a>-->
+      <!--<span class="jp-hidden">...</span>-->
+      <!--<a>2</a>-->
+      <!--<a>3</a>-->
+      <!--<a>4</a>-->
+      <!--<a>5</a>-->
+      <!--<a class="jp-hidden">6</a>-->
+      <!--<a class="jp-hidden">7</a>-->
+      <!--<a class="jp-hidden">8</a>-->
+      <!--<a class="jp-hidden">9</a>-->
+      <!--<span>...</span>-->
+      <!--<a>10</a>-->
+      <!--<a class="jp-next">next -></a>-->
+    <!--</div>-->
+
+    <table>
+      <tr>
+        <td>
+          <ul id="itemContainer">
+            <li id="success">
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
 
     <div id="error"></div>
     <div class="bottom">Powered by the <a href="http://www.last.fm/api">Last.fm API</a>.
