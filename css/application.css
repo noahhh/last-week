@@ -15,6 +15,40 @@ h5 {
     margin: 50px 50px 0 50px;
     text-align: center;
 }
+@media (max-width: 537px) {
+    .title {
+        margin: 50px auto 0 auto;
+        text-align: center;
+    }
+    h5 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+    }
+    .above-main {
+        margin: 65px 10px 0 10px;
+        text-align: center;
+    }
+    #success {
+        display: inline-block;
+        text-align: justify;
+        font-size: 14px;
+        margin: 25px 0 0 0;
+        padding: 0 -50px 0 -50px;
+    }
+    ul {
+        padding: 0 0 0 0;
+    }
+    table {
+        margin: 0 0 0 0;
+    }
+    .bottom {
+        margin: 100px auto 0 auto;
+        font-size: 12px;
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+    }
+}
 .red {
     color: #ff0000;
     font-size: 47px;
@@ -34,7 +68,6 @@ h5 {
 }
 table {
     margin: 0 auto 0 auto;
-    /*padding-top: 25px;*/
 }
 #success {
     display: inline-block;

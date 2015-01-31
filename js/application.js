@@ -31,7 +31,7 @@ $(document).ready(function() {
                                   + "http://www.last.fm/user/"
                                   + user.name + '"' + 'target="_blank"' + '>' + user.name
                                   + '</a>' + '</b>' + "'s "
-                                  + "top artist last week was: "
+                                  + "top artist: "
                                   + '</span>' + '<br>')).then($('#success').append('<span class="topartist">'
                                   + '<a href="'
                                   + data1.topartists.artist[0].url
