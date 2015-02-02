@@ -27,12 +27,27 @@ $(document).ready(function() {
                       success: function(data1) {
                           if(typeof data1.topartists.artist[0] !== "undefined") {
                               $.when($('#success').append('<span class="username">'
-                                  + '<b>' + '<a href="'
+                                  + '<b>'
+                                  + '<i class="fa fa-lastfm-square"'
+                                  + 'data-name='
+//                                  +'"'
+                                  + user.name
+//                                  +'"'
+                                  + '>'
+                                  + '</i>'
+                                  + '&nbsp;'
+                                  + '<a href="'
                                   + "http://www.last.fm/user/"
-                                  + user.name + '"' + 'target="_blank"' + '>' + user.name
+                                  + user.name
+                                  + '"'
+                                  + 'target="_blank"'
+                                  + '>'
+                                  + user.name
                                   + '</a>' + '</b>' + "'s "
                                   + "top artist: "
-                                  + '</span>' + '<br>')).then($('#success').append('<span class="topartist">'
+                                  + '</span>'
+                                  + '<br>')).then($('#success').append('<span class="topartist">'
+                                  + '&nbsp;' + '&nbsp;' + '&nbsp;' + '&nbsp;'
                                   + '<a href="'
                                   + data1.topartists.artist[0].url
                                   + '"' + 'target="_blank"' + '>'

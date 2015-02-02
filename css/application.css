@@ -50,9 +50,21 @@ h5 {
         text-align: center;
     }
 }
+
+/*
+.red,.fa-lastfm-square {
+    color: #ff0000;
+}
+.red {
+    font-size: 47px;
+}
+*/
 .red {
     color: #ff0000;
     font-size: 47px;
+}
+.fa-lastfm-square {
+    cursor: pointer;
 }
 .above-main {
     margin: 65px 50px 0 50px;

@@ -19,14 +19,14 @@
         <div class="form">
           <input id="textbox" type="text" placeholder="Enter your last.fm username here" style="width: 185px;" onkeydown="if(event.keyCode==13)$('#button').trigger('click');"/>
           <span id="button">
-            <input type="submit" value="Search" />
+            <input type="submit" value="Search" id="submit-user"/>
           </span>
         </div>
       </p>
     </div>
     <br>
 
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
       function paginate() {
         $('div.holder').jPages({
           containerID: 'itemContainer',
@@ -37,7 +37,7 @@
       $(function(){
         paginate();
       });
-    </script>
+    </script>-->
 
     <!--<div class="holder">-->
       <!--<a class="jp-previous jp-disabled"<- previous</a>-->
@@ -66,6 +66,23 @@
         </td>
       </tr>
     </table>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(document).on('click', '.fa-lastfm-square', function(event) {
+          var dataName = event.target.getAttribute("data-name");
+          $("#textbox").val(dataName);
+        });
+      });
+    </script>
+
+    <!--<script type="text/javascript">
+      $(document).bind("ajax:complete", function(event,xhr,status){
+        if($("#submit-user").length > 0) {
+          $('#textbox').val('');  // resets all note form fields to blank upon note submit
+        }
+      });
+    </script>-->
 
     <div id="error"></div>
     <div class="bottom">Powered by the <a href="http://www.last.fm/api">Last.fm API</a>.
