@@ -70,8 +70,8 @@
     <script type="text/javascript">
       $(document).ready(function () {
         $(document).on('click', '.fa-lastfm-square', function(event) {
-          var dataName = event.target.getAttribute("data-name");
-          $("#textbox").val(dataName);
+          var userName = event.target.getAttribute("user-name");
+          $("#textbox").val(userName);
         });
       });
     </script>

@@ -1,15 +1,16 @@
 $(document).ready(function() {
   $( "#button" ).click(function() {
       $( "#textbox" ).blur();
-      var lastfmusername = 'user=' +                               document.getElementById("textbox").value;
+      var lastfmusername = 'user='
+          + document.getElementById("textbox").value;
       $('#textbox').val('');
       $.ajax({
           type: 'POST',
           url: 'http://ws.audioscrobbler.com/2.0/',
-          data: 'method=user.getfriends&' +
-              lastfmusername +
-              '&api_key=84f102d8aaa1c663732540d339bf2100&' +
-              'format=json',
+          data: 'method=user.getfriends&'
+              + lastfmusername
+              + '&api_key=84f102d8aaa1c663732540d339bf2100&'
+              + 'format=json',
           dataType: 'json',
           success: function(data) {
               var users = data.friends.user;
@@ -17,22 +18,20 @@ $(document).ready(function() {
                   $.ajax({
                       type: 'POST',
                       url: 'http://ws.audioscrobbler.com/2.0/',
-                      data: 'method=user.gettopartists&' +
-                          'user=' +
-                          user.name +
-                          '&period=7day&' +
-                          'api_key=84f102d8aaa1c663732540d339bf2100&' +
-                          'format=json',
+                      data: 'method=user.gettopartists&'
+                          + 'user='
+                          + user.name
+                          + '&period=7day&'
+                          + 'api_key=84f102d8aaa1c663732540d339bf2100&'
+                          + 'format=json',
                       dataType: 'json',
                       success: function(data1) {
                           if(typeof data1.topartists.artist[0] !== "undefined") {
                               $.when($('#success').append('<span class="username">'
                                   + '<b>'
                                   + '<i class="fa fa-lastfm-square"'
-                                  + 'data-name='
-//                                  +'"'
+                                  + 'user-name='
                                   + user.name
-//                                  +'"'
                                   + '>'
                                   + '</i>'
                                   + '&nbsp;'
@@ -50,10 +49,14 @@ $(document).ready(function() {
                                   + '&nbsp;' + '&nbsp;' + '&nbsp;' + '&nbsp;'
                                   + '<a href="'
                                   + data1.topartists.artist[0].url
-                                  + '"' + 'target="_blank"' + '>'
+                                  + '"' + 'target="_blank"'
+                                  + '>'
                                   + data1.topartists.artist[0].name
-                                  + '</a>' + " (" + data1.topartists.artist[0].playcount
-                                  + " plays)" + '</span>' + '<br>' + '<br>'));
+                                  + '</a>'
+                                  + " (" + data1.topartists.artist[0].playcount
+                                  + " plays)"
+                                  + '</span>'
+                                  + '<br>' + '<br>'));
                           }
                       }
                   });
