@@ -66,6 +66,9 @@ h5 {
 .fa-lastfm-square {
     cursor: pointer;
 }
+.fa-lastfm-square:hover {
+    color: #ff0000;
+}
 .above-main {
     margin: 65px 50px 0 50px;
     text-align: center;
