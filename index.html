@@ -72,7 +72,8 @@
         $(document).on('click', '.fa-lastfm-square', function(event) {
           var userName = event.target.getAttribute("user-name");
           $("#textbox").val(userName);
-          $("#textbox").focus();
+          $("#textbox").focus()
+          $('#button').trigger('click');
         });
       });
     </script>
