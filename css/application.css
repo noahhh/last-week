@@ -92,6 +92,18 @@ a {
 .username a {
     color: #404040;
 }
+.username a:hover {
+    color: #ff0000;
+}
+.playcount a {
+    color: #404040;
+}
+.playcount a:hover {
+    color: #ff0000;
+}
+.topartist a:hover {
+    color: #404040;
+}
 .bottom {
     margin: 100px 50px 0 50px;
     font-size: 12px;

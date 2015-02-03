@@ -52,6 +52,8 @@ $(document).ready(function() {
                                   + '>'
                                   + data1.topartists.artist[0].name
                                   + '</a>'
+                                  + '</span>'
+                                  + '<span class="playcount">'
                                   + '<a href="'
                                   + "http://www.last.fm/user/"
                                   + user.name
