@@ -3,7 +3,6 @@ $(document).ready(function() {
       $( "#textbox" ).blur();
       var lastfmusername = 'user='
           + document.getElementById("textbox").value;
-      $('#textbox').val('');
       $.ajax({
           type: 'POST',
           url: 'http://ws.audioscrobbler.com/2.0/',
@@ -68,6 +67,5 @@ $(document).ready(function() {
               data.preventDefault();
               data.stopPropagation();
       });
-
   });
 });
