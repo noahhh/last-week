@@ -12,12 +12,53 @@ h5 {
     font-weight: 700;
 }
 .title {
-    margin: 0 50px 0 50px;
+    margin: 50px 50px 0 50px;
     text-align: center;
+}
+@media (max-width: 537px) {
+    .title {
+        margin: 50px auto 0 auto;
+        text-align: center;
+    }
+    h5 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        padding: 0 50px 0 50px;
+    }
+    .above-main {
+        margin: 65px 10px 0 10px;
+        text-align: center;
+    }
+    #success {
+        display: inline-block;
+        text-align: justify;
+        font-size: 14px;
+        margin: 25px 0 0 0;
+        padding: 0 -50px 0 -50px;
+    }
+    ul {
+        padding: 0 0 0 0;
+    }
+    table {
+        margin: 0 0 0 0;
+    }
+    .bottom {
+        margin: 100px auto 0 auto;
+        font-size: 12px;
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+    }
 }
 .red {
     color: #ff0000;
     font-size: 47px;
+}
+.fa-lastfm-square {
+    cursor: pointer;
+}
+.fa-lastfm-square:hover {
+    color: #ff0000;
 }
 .above-main {
     margin: 65px 50px 0 50px;
@@ -25,17 +66,17 @@ h5 {
 }
 .form {
     max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -15px;
+    margin: -15 auto 0 auto;
     display: inline-block;
 }
-table {
-    margin-left: auto;
-    margin-right: auto;
-    buffer-top: 50px;
+.holder {
+    margin: 0 auto 0 auto;
+    text-align: center;
 }
-.success {
+table {
+    margin: 0 auto 0 auto;
+}
+#success {
     display: inline-block;
     text-align: justify;
     margin: 25px 50px 25px 50px;
@@ -49,6 +90,18 @@ a {
     padding-bottom:10px;
 }
 .username a {
+    color: #404040;
+}
+.username a:hover {
+    color: #ff0000;
+}
+.playcount a {
+    color: #404040;
+}
+.playcount a:hover {
+    color: #ff0000;
+}
+.topartist a:hover {
     color: #404040;
 }
 .bottom {
