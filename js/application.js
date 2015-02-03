@@ -52,8 +52,17 @@ $(document).ready(function() {
                                   + '>'
                                   + data1.topartists.artist[0].name
                                   + '</a>'
+                                  + '<a href="'
+                                  + "http://www.last.fm/user/"
+                                  + user.name
+                                  + "/library/music/"
+                                  + data1.topartists.artist[0].name
+                                  + '?&rangetype=week"'
+                                  + 'target="_blank"'
+                                  + '>'
                                   + " (" + data1.topartists.artist[0].playcount
                                   + " plays)"
+                                  + '</a>'
                                   + '</span>'
                                   + '<br>' + '<br>'));
                           }
