@@ -17,7 +17,7 @@
     <div class="above-main">
       <p>
         <div class="form">
-          <input id="textbox" type="text" autofocus="autofocus" placeholder="Enter your last.fm username here" style="width: 185px;" onkeydown="if(event.keyCode==13)$('#button').trigger('click');"/>
+          <input id="textbox" type="text" autofocus="autofocus" placeholder="Enter your last.fm username here" style="width: 185px;" onkeydown="if(event.keyCode==13)$('#button').trigger('click');" onfocus="this.value='';"/>
           <span id="button">
             <input type="submit" value="Search" id="submit-user"/>
           </span>
